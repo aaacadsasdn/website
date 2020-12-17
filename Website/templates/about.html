@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{%load humanize%}
+{% block main %}
+<h1>about dayo</h1>
+<h2>my person</h2>
+<p>{% now "Y/m/d H:i" %}I have been to Numazu {{ num_travel|intcomma }} times.</p>
+<h2>skill</h2>
+<ul>
+    {% for skill in skills%}
+    <li>{{skill}}</li>
+    {% empty %}
+    <li>no skill</li>
+    {% endfor %}
+
+</ul>
+{% endblock %}

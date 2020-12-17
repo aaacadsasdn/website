@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+<h1>index dayo</h1>
+
+{% if username == "fuckman" %}
+<h1>bich</h1>
+
+{% elif username %}
+<h1>{{ username }},welcome!</h1>
+
+{% else %}
+<h1>{{ user }},welcome!</h1>
+
+{% endif %}
+
+<img src="{% static 'images.jpeg' %}" />
+{% endblock %}
